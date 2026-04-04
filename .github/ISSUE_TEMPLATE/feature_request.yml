@@ -1,0 +1,74 @@
+name: Feature or Balance Request
+description: Suggest a balance change, new feature, or gameplay improvement
+title: "[Feedback] "
+labels: ["feedback", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## One suggestion per issue
+        Keep each request focused. If you have multiple unrelated ideas,
+        open multiple issues.
+
+        **Account / ban / payment issues** don't belong here — use
+        [Support Tickets](https://support.vexxusarts.com/submit-ticket/2-mopeio).
+
+  - type: checkboxes
+    id: preflight
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched open and closed issues and this is not a duplicate
+          required: true
+        - label: This report covers one suggestion or balance concern
+          required: true
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type
+      options:
+        - Balance (too strong / too weak / too fast / too slow)
+        - Suggestion (new feature or mechanic)
+        - UX / clarity improvement
+        - Visual polish
+    validations:
+      required: true
+
+  - type: input
+    id: animal
+    attributes:
+      label: Animal / Feature
+      placeholder: "e.g., Pufferfish, Yeti, bird flight visuals"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What feels wrong or what's missing?
+      placeholder: "Pufferfish's final water blow feels too strong and creates too much burst damage."
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: What should change?
+      placeholder: "Reduce the strength of the final blow, or make it scale down near the end."
+    validations:
+      required: true
+
+  - type: textarea
+    id: reason
+    attributes:
+      label: Why would this help?
+      placeholder: "It would keep the ability useful without making it disproportionately punishing."
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence / examples (optional)
+      description: "Clips, comparisons, or extra context."
